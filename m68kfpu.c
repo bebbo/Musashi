@@ -754,13 +754,13 @@ static void fpgen_rm_reg(uint16 w2)
 				switch (opmode)
 				{
 					case 0x00: source = M_PI; break;
-					case 0x0b: source = M_LN10; break;
+					case 0x0b: source = 0.301029995663981195214 /* Log10(2) */; break;
 					case 0x0c: source = M_E; break;
 					case 0x0d: source = M_LOG2E; break;
 					case 0x0e: source = M_LOG10E; break;
 					case 0x0f: source = 0.0; break;
-					case 0x30: source = 1e-2; break;
-					case 0x31: source = 1e-10; break;
+					case 0x30: source = M_LN2; break;
+					case 0x31: source = M_LN10; break;
 					case 0x32: source = 1.; break;
 					case 0x33: source = 1e1; break;
 					case 0x34: source = 1e2; break;
